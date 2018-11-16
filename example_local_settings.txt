@@ -1,0 +1,10 @@
+import os
+
+DEBUG = True
+
+LOGIN = os.environ.get("LOGIN", "user_login")
+PASSWORD = os.environ.get("PASSWORD", "user_password")
+GROUP_ID = int(os.environ.get("GROUP_ID", -1))
+TIMEOUT = int(os.environ.get("TIMEOUT", 50))
+MESSAGE = os.environ.get("MESSAGE", "+")
+
