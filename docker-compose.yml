@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+
+  bot:
+    build: .
+    image: python:latest
+
+    env_file: vars.env
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: bash -c "python main.py"
+    volumes:
+      - ./:/usr/src/app
+    restart: always
+    networks:
+      - queue_bot
+
+networks:
+  queue_bot:
