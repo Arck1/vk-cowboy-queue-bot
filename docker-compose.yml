@@ -12,7 +12,7 @@ services:
     command: bash -c "python main.py"
     volumes:
       - ./:/usr/src/app
-    restart: always
+    restart: 'no'
     networks:
       - queue_bot
 
